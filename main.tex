@@ -22,6 +22,11 @@
 % \setmainhangulfont{Noto Serif CJK KR}
 % \setsanshangulfont{Noto Sans CJK KR}
 
+% Korean italic workaround:
+% CJK fonts have no italic variant, so \textit{} silently does nothing.
+% \hangulit applies fontspec's FakeSlant (geometric slant) to simulate italics.
+\newcommand{\hangulit}[1]{{\addhangulfontfeatures{FakeSlant=0.167}#1}}
+
 % ---------- Metadata ----------
 \title[Short Title]{Full Presentation Title}
 \subtitle{Subtitle (optional)}
@@ -96,7 +101,7 @@
 
     \begin{itemize}
         \item 가나다라마바사 — 기본 한글 자모
-        \item \textbf{굵은 글씨}와 \textit{이탤릭체} 지원
+        \item \textbf{굵은 글씨}와 \hangulit{기울임꼴} 지원
         \item 숫자 및 혼용: 2024년 1월 1일
         \item 영문 혼용: LuaLaTeX으로 컴파일된 한국어 슬라이드
     \end{itemize}
