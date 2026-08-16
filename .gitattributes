@@ -1,0 +1,11 @@
+# All .md file use LF newline
+*.md text eol=lf
+*.txt text eol=lf
+# For tex file
+*.tex text eol=lf
+*.bib text eol=lf
+
+*.png binary
+*.pdf binary
+*.jpeg binary
+*.mp3 binary
